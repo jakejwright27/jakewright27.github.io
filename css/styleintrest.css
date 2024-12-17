@@ -1,0 +1,107 @@
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Set font to Arial for everything */
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  min-height: 100vh; /* Ensure the page takes full height */
+}
+
+/* Navigation - Fixed at the Top */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(96, 167, 247, 0.9);
+  height: 60px; /* Adjust height for the top navbar */
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Align menu items horizontally */
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Ensures nav is above other elements */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 20px; /* Add spacing between menu items */
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Content Below the Navigation */
+.content {
+  margin-top: 80px; /* Add space below the navbar */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box; /* Prevent padding from affecting the width */
+  overflow: hidden; /* Hide any content spilling out */
+  font-family: Arial, sans-serif;
+}
+
+/* Image-Title Container */
+.image-title-container {
+  position: relative;
+  width: 100%; /* Ensure the container takes full width */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-title-container img {
+  width: 100%; /* Resize the image to fill the container */
+  height: 100%;
+  opacity: 0.5; /* Set opacity to make the image semi-transparent */
+  object-fit: cover; /* Make sure the image covers the entire container */
+  display: block;
+}
+
+.image-title-container .title {
+  position: absolute;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 2rem; /* Adjust the size as needed */
+  z-index: 1; /* Ensure the title is in front of the image */
+  margin: 0;
+}
+
+/* Media Embeds */
+.youtube iframe, .tableau iframe {
+  width: 100%; /* Media fills the width of the content area */
+  height: 500px; /* Adjust height as needed */
+}
+
+.tableau iframe {
+  height: 600px; /* Adjust height for Tableau as needed */
+}
+
+/* Unordered Lists */
+ul {
+  list-style: none;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
